@@ -22,7 +22,6 @@ const NAV_LINKS = [
   { href: "#sobre", label: "Sobre" },
   { href: "#ensino", label: "Ensino" },
   { href: "#estrutura", label: "Estrutura" },
-  { href: "#galeria", label: "Galeria" },
   { href: "#depoimentos", label: "Depoimentos" },
   { href: "#contato", label: "Contato" },
 ];
@@ -141,25 +140,12 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl gradient-primary flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <span className="text-white font-extrabold text-sm sm:text-base tracking-tight">
-                CV
-              </span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="text-primary font-extrabold text-sm leading-tight tracking-tight">
-                Col<span className="text-red">e</span>gio{" "}
-                <span className="text-red">Valcris</span>
-              </p>
-              <p
-                className={`text-[11px] font-semibold leading-tight ${
-                  scrolled ? "text-green" : "text-green"
-                }`}
-              >
-                EEVI Vida de Crianca
-              </p>
-            </div>
+          <a href="#" className="flex items-center gap-2 group">
+            <img
+              src="/logo-valcris-objetivo.jpg"
+              alt="Colegio Valcris - Vida de Crianca - Sistema Objetivo"
+              className="h-12 sm:h-14 w-auto rounded-lg group-hover:scale-105 transition-transform"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -249,10 +235,11 @@ function Header() {
           {/* Close button */}
           <div className="flex justify-between items-center p-6 border-b border-gray-100">
             <div className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-lg gradient-primary flex items-center justify-center">
-                <span className="text-white font-bold text-xs">CV</span>
-              </div>
-              <span className="font-bold text-primary text-sm">Colegio Valcris</span>
+              <img
+                src="/logo-valcris-objetivo.jpg"
+                alt="Colegio Valcris - Vida de Crianca"
+                className="h-10 w-auto rounded-lg"
+              />
             </div>
             <button
               onClick={() => setMenuOpen(false)}
@@ -587,15 +574,18 @@ function SistemaEnsino() {
           </p>
         </div>
 
-        {/* Objetivo "logo" badge */}
+        {/* Objetivo logo badge */}
         <div className="flex justify-center mb-12 reveal-scale">
-          <div className="glass px-8 py-4 rounded-2xl flex items-center gap-4">
-            <div className="w-14 h-14 bg-objetivo rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-extrabold text-lg">OBJ</span>
-            </div>
+          <div className="glass px-8 py-5 rounded-2xl flex items-center gap-5">
+            <img
+              src="/logo-valcris-objetivo.jpg"
+              alt="Colegio Valcris - Sistema de Ensino Objetivo"
+              className="h-20 w-auto rounded-lg bg-white p-1.5"
+            />
             <div>
-              <p className="font-bold text-lg">Sistema Objetivo</p>
-              <p className="text-white/60 text-sm">Educacao que transforma</p>
+              <p className="font-bold text-lg">Escola Conveniada</p>
+              <p className="text-secondary font-semibold text-sm">Sistema de Ensino Objetivo</p>
+              <p className="text-white/50 text-xs mt-1">Educacao que transforma desde 2002</p>
             </div>
           </div>
         </div>
@@ -745,7 +735,7 @@ function Galeria() {
   ];
 
   return (
-    <section id="galeria" className="py-20 sm:py-28 bg-muted">
+    <section id="estrutura" className="py-20 sm:py-28 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 reveal">
           <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
@@ -1370,14 +1360,12 @@ function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Column 1: Logo & description */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-11 h-11 bg-white/15 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                <span className="font-extrabold text-sm">CV</span>
-              </div>
-              <div>
-                <p className="font-bold text-sm leading-tight">Colegio Valcris</p>
-                <p className="text-xs text-white/60">EEVI Vida de Crianca</p>
-              </div>
+            <div className="mb-5">
+              <img
+                src="/logo-valcris-objetivo.jpg"
+                alt="Colegio Valcris - Vida de Crianca"
+                className="h-16 w-auto rounded-lg bg-white p-1"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
               Educacao de qualidade em Barretos desde 2002.
